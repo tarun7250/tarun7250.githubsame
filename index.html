@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+  <meta charset="utf-8" />	
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+  body{
+            background:url("snake.jpg");
+            margin:0;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    .button{
+      float:left;
+      background-color : green; 
+      border: none;
+      border-radius:5px 20px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .button:hover {
+      background-color: white; 
+      color: green;
+    }
+    .button1{
+      float:left;
+      background-color : red; 
+      border: none;
+      border-radius:5px 20px;
+      color: #232f3e;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .button1:hover {
+      background-color: #232f3e; 
+      color: red;
+    }
+    .can{
+      padding-left:30%;
+
+    }
+    .buttonup{
+      float:left;
+      background-color : green; 
+      border: none;
+      border-radius:5px 20px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .buttonup:hover {
+      background-color: white; 
+      color: green;
+    }
+    .buttondown{
+      float:left;
+      background-color : red; 
+      border: none;
+      border-radius:5px 20px;
+      color: #232f3e;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .buttondown:hover {
+      background-color: #232f3e; 
+      color: red;
+    }
+    .buttons {
+      padding-left:25%;
+    }
+
+    .startbutton{
+      float:left;
+      background-color : green; 
+      border: none;
+      border-radius:5px 20px;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .startbutton:hover {
+      background-color: white; 
+      color: green;
+    }
+    .starting{
+      padding-left:30%;
+      padding-top:10%;
+    }
+    .center{
+      padding-left:20%;
+    }
+
+
+  
+  </style>
+</head>
+<body>
+
+<div class="starting">
+  <h1 >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  snake game</h1>
+  <h3>press restart button to start when game is over<br>
+  press automate button to automate the snake movement<br>
+  press speed up button to increase the speed twice<br>
+  press speed down button to reduce the spped twice<br>
+  press arrow keys to control<br></h3><br>
+  <div class="center"><button class="startbutton"><h2>start</h2></button></div>
+
+
+</div>
+
+<div class="can">
+  <canvas
+    class="canvas"
+    height="500"
+    width="500"
+    style="background-color: #232f3e">
+  </canvas>
+</div>
+
+  
+  <h1 class="score" align="center"></h1>
+<div class="buttons">
+  <button class="button">restart</button>
+  <button class="button1">automate</button>
+  <button class="buttonup">speed<br>up</button>
+  <button class="buttondown">speed<br>down</button>
+</div>
+
+</body>
+<script type="text/javascript" src="fruit.js"></script>
+<script type="text/javascript" src="snake.js"></script>
+<script type="text/javascript" src="draw.js"></script>
+</html>
