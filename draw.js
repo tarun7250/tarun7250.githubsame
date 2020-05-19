@@ -6,6 +6,9 @@ const buttondown = document.querySelector(".buttondown");
 const startbutton = document.querySelector(".startbutton");
 const starting = document.querySelector(".starting");
 const score = document.querySelector(".score");
+const instructions = document.querySelector(".instructions");
+const instru = document.querySelector(".instru");
+const back = document.querySelector(".back");
 
 const ctx = canvas.getContext("2d");
 const scale = 15;
@@ -22,6 +25,8 @@ var updation;
   buttondown.style.display="none";
   auto.style.display="none";
   score.style.display="none";
+  instructions.style.display="none";
+
 
 
 
@@ -46,7 +51,7 @@ var updation;
     snake.checkCollision();
     if(snake.test == 0) {
       document.querySelector('.score')
-        .innerText = "game over";
+        .innerText = "your score: "+snake.tail.length+"\n game over";
 
     }
     else {
@@ -75,6 +80,8 @@ var updation;
   button.onclick = function(){
     snake.test=1;
     snake.automate=0;
+    snake.total = 0;
+    snake.tail = [];
   }
   buttonup.onclick = function(){
     clearInterval(updation);
@@ -88,8 +95,22 @@ var updation;
     updation = setInterval(start,speed);
     
   }
+  instru.onclick = function(){
+    instructions.style.display="block";
+    instru.style.display="none";
+    startbutton.style.display="none";
+
+  }
+  back.onclick = function(){
+    instructions.style.display="none";
+    instru.style.display="block";
+    startbutton.style.display="block";
+  }
 
   
+
+
+
   window.addEventListener('keydown', ((evt) => {
     const direction = evt.key.replace('Arrow', '');
     snake.changeDirection(direction);
@@ -145,11 +166,9 @@ var updation;
     }, false)
 }
   
-//USAGE:
 
 var el = document.querySelector(".canvas")
 swipedetect(el, function(swipedir){
-   // swipedir contains either "none", "left", "right", "top", or "down"
     if (swipedir =='left')
     snake.changeDirection('Left')
         if (swipedir =='right')

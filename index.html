@@ -92,12 +92,12 @@
 
     .startbutton{
       
-      
       background-color : green; 
       border: none;
-      border-radius:5px 20px;
+      border-radius:5px;
       color: white;
-      padding: 15px 32px;
+      height:50px;
+      width:150px;
       text-align: center;
       display: inline-block;
       font-size: 16px;
@@ -119,7 +119,46 @@
       width:100px;
       margin:0 auto;
     }
+    .center{
+      padding-top:5%;
+    }
 
+    .instru{
+      
+      background-color : green; 
+      border: none;
+      border-radius:5px;
+      color: white;
+      height:50px;
+      width:150px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .instru:hover {
+      background-color: white; 
+      color: green;
+    }
+    .instructions
+    {}
+    .back{
+      
+      background-color : green; 
+      border: none;
+      border-radius:5px;
+      color: white;
+      height:50px;
+      width:150px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+    }
+    .back:hover {
+      background-color: white; 
+      color: green;
+    }
 
   
   </style>
@@ -128,12 +167,15 @@
 
 <div class="starting">
   <h1 align = "center">  snake game</h1>
-  <h3 align = "center">press restart button to start when game is over<br>
+  <div class="instructions">
+  <h3 align = "center">press restart button to start when game is over or to stop automate function<br>
   press automate button to automate the snake movement<br>
   press speed up button to increase the speed twice<br>
-  press speed down button to reduce the spped twice<br>
-  press arrow keys to control<br></h3><br>
-  <div class="center"><div class="alin"><button class="startbutton"><h2>start</h2></button></div></div>
+  press speed down button to reduce the speed twice<br>
+  press arrow keys or swipe in the required direction to control<br></h3><br>
+  <div class="center"><div class="alin"><button class="back"><h2>back</h2></button><br></div></div></div>
+  <div class="center"><div class="alin"><button class="startbutton"><h2>start</h2></button><br></div></div>
+  <div class="center"><div class="alin"><button class="instru"><h2>instructions<h2></button><br></div></div>
 
 
 </div>
