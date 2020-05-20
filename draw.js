@@ -10,6 +10,8 @@ const instructions = document.querySelector(".instructions");
 const instru = document.querySelector(".instru");
 const back = document.querySelector(".back");
 
+var audio = document.getElementById("audio");
+
 const ctx = canvas.getContext("2d");
 const scale = 15;
 const rows = canvas.height  / scale;
@@ -64,6 +66,7 @@ var updation;
   }
 
   startbutton.onclick = function() {
+    audio.play();
     canvas.style.display="block";
     button.style.display="block";
     buttonup.style.display="block";
@@ -74,34 +77,40 @@ var updation;
   }
 
   auto.onclick = function() {
+    audio.play();
     snake.automate=1;
   }
 
   button.onclick = function(){
+    audio.play();
     snake.test=1;
     snake.automate=0;
     snake.total = 0;
     snake.tail = [];
   }
   buttonup.onclick = function(){
+    audio.play();
     clearInterval(updation);
     speed = speed / 2;
     updation = setInterval(start,speed);
     
   }
   buttondown.onclick = function(){
+    audio.play();
     clearInterval(updation);
     speed = speed * 2;
     updation = setInterval(start,speed);
     
   }
   instru.onclick = function(){
+    audio.play();
     instructions.style.display="block";
     instru.style.display="none";
     startbutton.style.display="none";
 
   }
   back.onclick = function(){
+    audio.play();
     instructions.style.display="none";
     instru.style.display="block";
     startbutton.style.display="block";
